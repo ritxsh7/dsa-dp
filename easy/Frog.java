@@ -4,10 +4,10 @@ public class Frog {
         int prev1 = 0;
         int prev2 = 0;
 
-        for (int i = 2; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
             int oneStep = prev1 + Math.abs(nums[i] - nums[i - 1]);
             int twoSteps = Integer.MAX_VALUE;
-            if (i > 2) {
+            if (i > 1) {
                 twoSteps = prev2 + Math.abs(nums[i] - nums[i - 2]);
             }
             int curr = Math.min(oneStep, twoSteps);
